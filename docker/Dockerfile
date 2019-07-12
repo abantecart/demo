@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
     nginx \
     mysql-server \
     mc \
-    net-tools && \
-    docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip && \
+    net-tools  \
+    libxml2-dev && \
+    docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
@@ -29,6 +30,8 @@ RUN git clone https://github.com/abantecart/abantecart-src.git /var/www/abanteca
 WORKDIR /var/www/abantecart/public_html/
 
 COPY resources /var/www/abantecart/public_html/resources
+COPY thumbnails /var/www/abantecart/public_html/image/thumbnails
+COPY config.php /var/www/abantecart/public_html/system/
 COPY abc.sql /var/www/abantecart/
 
 RUN  service mysql start \
