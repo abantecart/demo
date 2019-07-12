@@ -1,0 +1,8 @@
+# docker-compose version
+version: '2'
+services:
+  abantecart:
+     build: ./docker
+     ports:
+       - "8998:80"
+       - "3307:3306"
