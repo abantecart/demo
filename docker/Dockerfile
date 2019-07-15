@@ -34,7 +34,7 @@ COPY abc.sql /var/www/abantecart/
 RUN  service mysql start \
     && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=http://demo.abantecart.com --https_server=https://demo.abantecart.com --with-sample-data \
     && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
-    && apt-get clean && service cron restart
+    && apt-get clean
 
 COPY resources /var/www/abantecart/public_html/resources
 COPY thumbnails /var/www/abantecart/public_html/image/thumbnails
