@@ -1,5 +1,5 @@
 FROM php:7.2-fpm
-MAINTAINER Dvagner <help@abantecart.com>
+MAINTAINER Denis Vagner <help@abantecart.com>
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -29,15 +29,16 @@ RUN git clone https://github.com/abantecart/abantecart-src.git /var/www/abanteca
     && chown -R www-data:www-data /var/www/abantecart
 WORKDIR /var/www/abantecart/public_html/
 
-COPY resources /var/www/abantecart/public_html/resources
-COPY thumbnails /var/www/abantecart/public_html/image/thumbnails
-COPY config.php /var/www/abantecart/public_html/system/
 COPY abc.sql /var/www/abantecart/
 
 RUN  service mysql start \
     && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=http://demo.abantecart.com --https_server=https://demo.abantecart.com --with-sample-data \
     && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
-    && apt-get clean
+    && apt-get clean && service cron restart
+
+COPY resources /var/www/abantecart/public_html/resources
+COPY thumbnails /var/www/abantecart/public_html/image/thumbnails
+COPY config.php /var/www/abantecart/public_html/system/
 
 EXPOSE 80 3306
 
