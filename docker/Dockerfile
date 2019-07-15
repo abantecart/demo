@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     libpng-dev \
     nginx \
-    mysql-server \
+    mariadb-server \
     mc \
     net-tools  \
     libxml2-dev && \
