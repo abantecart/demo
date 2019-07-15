@@ -13,12 +13,14 @@ RUN apt-get update && apt-get install -y \
     mariadb-server \
     mc \
     net-tools  \
-    libxml2-dev && \
+    libxml2-dev \ 
+    libfreetype6-dev && \
     docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
+    service mysql start; && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    service mysql start; mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
+    mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
 
 RUN sed -i 's/bind-address/#bind-address/' /etc/mysql/my.cnf
 
