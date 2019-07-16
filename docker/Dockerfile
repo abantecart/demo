@@ -17,17 +17,14 @@ RUN apt-get update && apt-get install -y \
     net-tools  \
     libxml2-dev && \
     docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
-    #docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
-    docker-php-ext-configure gd --with-gd --with-webp-dir --with-jpeg-dir \
-    --with-png-dir --with-zlib-dir --with-xpm-dir --with-freetype-dir && \
+    docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
-    service mysql start && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
+    service mysql start;mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
 
 RUN sed -i 's/bind-address/#bind-address/' /etc/mysql/my.cnf
 
-ADD default /etc/nginx/sites-available/
+ADD default.conf /etc/nginx/sites-available/default
 ADD php.ini /usr/local/etc/php/conf.d/40-custom.ini
 
 RUN git clone https://github.com/abantecart/abantecart-src.git /var/www/abantecart \
@@ -44,6 +41,8 @@ RUN  service mysql start \
 COPY resources /var/www/abantecart/public_html/resources
 COPY thumbnails /var/www/abantecart/public_html/image/thumbnails
 COPY config.php /var/www/abantecart/public_html/system/
+
+RUN chown -R www-data:www-data /var/www/abantecart
 
 EXPOSE 80 3306
 
