@@ -1,5 +1,5 @@
-FROM php:7.4.16-fpm-buster
-MAINTAINER Denis Vagner <help@abantecart.com>
+FROM php:7.4-fpm
+LABEL maintainer="Denis Vagner <help@abantecart.com>"
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -11,16 +11,19 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     libpng-dev \
     libxpm-dev \
+    libonig-dev \
+    libzip-dev \
     nginx \
     mariadb-server \
     mc \
     net-tools  \
     libxml2-dev && \
     docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
-    docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+    docker-php-ext-configure gd && \
     docker-php-ext-install -j$(nproc) gd && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    service mysql start;mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer 
+
+RUN service mysql start;mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
 
 RUN sed -i 's/bind-address/#bind-address/' /etc/mysql/my.cnf
 
