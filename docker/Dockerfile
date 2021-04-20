@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-stretch
+FROM php:7.4.16-fpm-buster
 MAINTAINER Denis Vagner <help@abantecart.com>
 
 RUN apt-get update && apt-get install -y \
