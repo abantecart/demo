@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
     docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer 
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN service mariadb start;mysql -u root -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'pass';";mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;";mysql -u root -e "create database abantecart;";
 
@@ -37,8 +37,8 @@ WORKDIR /var/www/abantecart/public_html/
 COPY abc.sql /var/www/abantecart/
 
 RUN  service mariadb start \
-    && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=https://demo.abantecart.com --https_server=https://demo.abantecart.com --with-sample-data \
-    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
+    && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=https://demo.abantecart.com/ --https_server=https://demo.abantecart.com/ --with-sample-data=abantecart_sample_data.sql \
+#    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
     && apt-get clean \
     && rm -rf /var/www/abantecart/public_html/install \
     && rm -rf /var/www/abantecart/public_html/system/cache/*
