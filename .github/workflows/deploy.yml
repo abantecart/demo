@@ -25,5 +25,5 @@ jobs:
       - name: Build & publish to dockerhub
         run: |
           cd $GITHUB_WORKSPACE/docker
-          docker login --username=${{ secrets.DOCKERHUB_USER }} --password-stdin <<<${{ secrets.DOCKERHUB_PASSWORD }}
+          echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
           docker buildx build --platform linux/amd64,linux/arm64 -t abantecart/abantecart_demo:latest --push ./
