@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 28, 2023 at 06:50 AM
+-- Generation Time: Jul 28, 2023 at 11:42 AM
 -- Server version: 10.5.19-MariaDB-cll-lve
 -- PHP Version: 7.2.34
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u323096268_newdemo`
+-- Database: `_demo`
 --
 
 -- --------------------------------------------------------
@@ -104,12 +104,12 @@ TRUNCATE TABLE `abc_ant_messages`;
 --
 
 INSERT INTO `abc_ant_messages` (`id`, `priority`, `start_date`, `end_date`, `viewed_date`, `viewed`, `title`, `description`, `html`, `url`, `language_code`, `date_modified`) VALUES
-('softaculous_review', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:13:02', 2, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Please rate AbanteCart or share your experience with other eCommerce entrepreneurs. Go to <strong><a href=\"http://www.softaculous.com/rate/AbanteCart\" target=\"_blank\">Softaculous rating page</a></strong> to add your rating or <strong><a href=\"http://www.softaculous.com/review/AbanteCart\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 06:29:15'),
-('abantecart_share_word', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:15:31', 1, 'Help us making AbanteCart #1', '', '<p class=\"p1\">Do you enjoy AbanteCart? See how you can help and contribute towards making AbanteCart even better.\r\n<strong><a href=\"http://www.abantecart.com/contribute-to-abantecart\" target=\"_abantecart\">Learn more</a></strong> </p>', '', '*', '2023-07-28 06:29:15'),
-('elastic_search', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:19:08', 2, 'Advanced Product Search ', '', 'Boost and improve <strong>AbanteCart</strong> product searchability for your customers.   This is now possible with <strong><a href=\"http://marketplace.abantecart.com/elastic_search\" target=\"_blank\">advanced search powered by ElasticSeach</a></strong>', '', '*', '2023-07-28 06:29:15'),
-('review_1', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '0000-00-00 00:00:00', 0, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Get $5 Amazon gift card on the approval of Text review or $10 for Video review. Go to <strong><a href=\"https://www.softwaresuggest.com/abantecart/write-review\" target=\"_blank\">Softwaresuggest rating page</a></strong> to add your rating or <strong><a href=\"https://www.softwaresuggest.com/abantecart/write-review\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 06:29:15'),
-('review_2', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '0000-00-00 00:00:00', 0, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Please rate AbanteCart or share your experience with other eCommerce entrepreneurs. Go to <strong><a href=\"https://www.crowdreviews.com/abantecart/write-review\" target=\"_blank\">CrowdReviews rating page</a></strong> to add your rating or <strong><a href=\"https://www.crowdreviews.com/abantecart/write-review\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 06:29:15'),
-('banner', 1, '2011-09-16 06:54:47', '2030-01-01 00:00:00', '2023-07-27 13:12:02', 1, 'Banner at AbanteCart header', '', '<strong>AbanteCart</strong> V1.3.4 is a current application version. <strong><a href=\"http://www.abantecart.com/shopping-cart-news/abantecart-134-released\" target=\"_blank\">Learn more ... </a></strong>', 'http://www.abantecart.com', '*', '2023-07-28 06:29:15');
+('softaculous_review', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:13:02', 2, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Please rate AbanteCart or share your experience with other eCommerce entrepreneurs. Go to <strong><a href=\"http://www.softaculous.com/rate/AbanteCart\" target=\"_blank\">Softaculous rating page</a></strong> to add your rating or <strong><a href=\"http://www.softaculous.com/review/AbanteCart\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 10:39:33'),
+('abantecart_share_word', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:15:31', 1, 'Help us making AbanteCart #1', '', '<p class=\"p1\">Do you enjoy AbanteCart? See how you can help and contribute towards making AbanteCart even better.\r\n<strong><a href=\"http://www.abantecart.com/contribute-to-abantecart\" target=\"_abantecart\">Learn more</a></strong> </p>', '', '*', '2023-07-28 10:39:33'),
+('elastic_search', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-27 13:19:08', 2, 'Advanced Product Search ', '', 'Boost and improve <strong>AbanteCart</strong> product searchability for your customers.   This is now possible with <strong><a href=\"http://marketplace.abantecart.com/elastic_search\" target=\"_blank\">advanced search powered by ElasticSeach</a></strong>', '', '*', '2023-07-28 10:39:33'),
+('review_1', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '2023-07-28 10:39:38', 1, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Get $5 Amazon gift card on the approval of Text review or $10 for Video review. Go to <strong><a href=\"https://www.softwaresuggest.com/abantecart/write-review\" target=\"_blank\">Softwaresuggest rating page</a></strong> to add your rating or <strong><a href=\"https://www.softwaresuggest.com/abantecart/write-review\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 10:39:33'),
+('review_2', 1, '0000-00-00 00:00:00', '2030-01-01 00:00:00', '0000-00-00 00:00:00', 0, 'Review AbanteCart and your experience', '', 'Do you like <strong>AbanteCart</strong>? Please rate AbanteCart or share your experience with other eCommerce entrepreneurs. Go to <strong><a href=\"https://www.crowdreviews.com/abantecart/write-review\" target=\"_blank\">CrowdReviews rating page</a></strong> to add your rating or <strong><a href=\"https://www.crowdreviews.com/abantecart/write-review\" target=\"_blank\">write a review</a></strong>', '', '*', '2023-07-28 10:39:33'),
+('banner', 1, '2011-09-16 06:54:47', '2030-01-01 00:00:00', '2023-07-27 13:12:02', 1, 'Banner at AbanteCart header', '', '<strong>AbanteCart</strong> V1.3.4 is a current application version. <strong><a href=\"http://www.abantecart.com/shopping-cart-news/abantecart-134-released\" target=\"_blank\">Learn more ... </a></strong>', 'http://www.abantecart.com', '*', '2023-07-28 10:39:33');
 
 -- --------------------------------------------------------
 
@@ -142,16 +142,16 @@ TRUNCATE TABLE `abc_banners`;
 --
 
 INSERT INTO `abc_banners` (`banner_id`, `status`, `banner_type`, `banner_group_name`, `start_date`, `end_date`, `blank`, `target_url`, `sort_order`, `date_added`, `date_modified`) VALUES
-(18, 1, 1, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 6, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(17, 1, 2, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 5, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(16, 1, 1, 'Main bottom banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, 'https://www.abantecart.com', 4, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(15, 1, 1, 'Main bottom banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, 'https://www.abantecart.com', 3, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(14, 1, 1, 'Main bottom banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, 'https://www.abantecart.com', 2, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(13, 1, 1, 'Main bottom banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, 'https://www.abantecart.com', 1, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(11, 1, 2, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 4, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(10, 1, 2, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 3, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(9, 1, 2, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 2, '2023-07-27 13:09:03', '2023-07-27 13:09:03'),
-(8, 1, 2, 'Main Page Banners', '2023-07-27 13:09:03', '0000-00-00 00:00:00', 0, '', 1, '2023-07-27 13:09:03', '2023-07-27 13:09:03');
+(18, 1, 1, 'Main Page Banners', '2023-07-27 09:13:41', NULL, 0, '/index.php', 6, '2023-07-27 13:09:03', '2023-07-28 09:13:41'),
+(17, 1, 2, 'Main Page Banners', '2023-07-26 08:56:54', NULL, 0, '', 5, '2023-07-27 13:09:03', '2023-07-28 08:56:54'),
+(16, 1, 1, 'Main bottom banners', '2023-07-27 09:07:26', NULL, 0, 'https://www.abantecart.com', 4, '2023-07-27 13:09:03', '2023-07-28 09:07:26'),
+(15, 1, 1, 'Main bottom banners', '2023-07-27 09:07:34', NULL, 0, 'https://www.abantecart.com', 3, '2023-07-27 13:09:03', '2023-07-28 09:07:34'),
+(14, 1, 1, 'Main bottom banners', '2023-07-27 09:07:31', NULL, 0, 'https://www.abantecart.com', 2, '2023-07-27 13:09:03', '2023-07-28 09:07:31'),
+(13, 1, 1, 'Main bottom banners', '2023-07-27 09:06:59', NULL, 0, 'https://www.abantecart.com', 1, '2023-07-27 13:09:03', '2023-07-28 09:06:59'),
+(11, 1, 2, 'Main Page Banners', '2023-07-27 08:56:38', NULL, 0, '', 4, '2023-07-27 13:09:03', '2023-07-28 08:56:38'),
+(10, 1, 2, 'Main Page Banners', '2023-07-27 08:56:19', NULL, 0, '', 3, '2023-07-27 13:09:03', '2023-07-28 08:56:19'),
+(9, 1, 2, 'Main Page Banners', '2023-07-27 08:55:53', NULL, 0, '', 2, '2023-07-27 13:09:03', '2023-07-28 08:55:53'),
+(8, 1, 2, 'Main Page Banners', '2023-07-01 08:54:59', NULL, 0, '', 1, '2023-07-27 13:09:03', '2023-07-28 08:54:59');
 
 -- --------------------------------------------------------
 
@@ -366,29 +366,29 @@ INSERT INTO `abc_block_layouts` (`instance_id`, `layout_id`, `block_id`, `custom
 (1832, 11, 13, 0, 330, 50, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
 (1833, 11, 15, 0, 330, 70, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
 (1950, 11, 28, 0, 331, 20, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1782, 12, 21, 0, 356, 80, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(354, 12, 6, 0, 0, 60, 0, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(352, 12, 4, 0, 0, 40, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(351, 12, 3, 0, 0, 30, 0, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(350, 12, 2, 0, 0, 20, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(353, 12, 5, 0, 0, 50, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1781, 12, 24, 0, 356, 70, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(355, 12, 7, 0, 0, 70, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(356, 12, 8, 0, 0, 80, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(349, 12, 1, 0, 0, 10, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1763, 12, 14, 0, 349, 60, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1764, 12, 15, 0, 349, 70, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1761, 12, 26, 0, 349, 40, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1762, 12, 13, 0, 349, 50, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1770, 12, 12, 0, 353, 20, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1771, 12, 18, 0, 353, 30, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1772, 12, 22, 0, 353, 40, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1766, 12, 9, 0, 350, 10, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1779, 12, 11, 0, 356, 50, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1769, 12, 19, 0, 353, 10, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1778, 12, 25, 0, 356, 40, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1845, 12, 31, 0, 349, 20, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
-(1760, 12, 27, 0, 349, 30, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
+(2472, 12, 21, 0, 356, 80, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(354, 12, 6, 0, 0, 60, 0, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(352, 12, 4, 0, 0, 40, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(351, 12, 3, 0, 0, 30, 0, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(350, 12, 2, 0, 0, 20, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(353, 12, 5, 0, 0, 50, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(2471, 12, 24, 0, 356, 70, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(355, 12, 7, 0, 0, 70, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(356, 12, 8, 0, 0, 80, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(349, 12, 1, 0, 0, 10, 1, '2023-07-27 13:08:58', '2023-07-28 08:52:33'),
+(2455, 12, 17, 15, 349, 80, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2454, 12, 15, 0, 349, 70, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2453, 12, 14, 0, 349, 60, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2452, 12, 13, 0, 349, 50, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2464, 12, 20, 12, 353, 60, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2463, 12, 23, 11, 353, 50, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2462, 12, 22, 0, 353, 40, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2457, 12, 23, 9, 350, 20, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2470, 12, 17, 15, 356, 60, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2461, 12, 18, 0, 353, 30, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2469, 12, 11, 0, 356, 50, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2451, 12, 26, 0, 349, 40, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2450, 12, 27, 0, 349, 30, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
 (1846, 13, 31, 0, 378, 20, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
 (1799, 13, 27, 0, 378, 30, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
 (1810, 13, 11, 0, 379, 50, 1, '2023-07-27 13:08:58', '2023-07-27 13:08:58'),
@@ -594,16 +594,16 @@ INSERT INTO `abc_block_layouts` (`instance_id`, `layout_id`, `block_id`, `custom
 (1838, 11, 17, 16, 337, 30, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (1837, 11, 17, 14, 337, 20, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (1834, 11, 17, 15, 330, 80, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1780, 12, 17, 15, 356, 60, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
+(2468, 12, 25, 0, 356, 40, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
 (366, 12, 17, 1, 19, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1774, 12, 20, 12, 353, 60, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1775, 12, 17, 13, 356, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1765, 12, 17, 15, 349, 80, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1776, 12, 17, 14, 356, 20, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1767, 12, 23, 9, 350, 20, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1768, 12, 17, 10, 352, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1773, 12, 23, 11, 353, 50, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(1777, 12, 17, 16, 356, 30, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
+(2460, 12, 12, 0, 353, 20, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2467, 12, 17, 16, 356, 30, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2449, 12, 31, 0, 349, 20, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2466, 12, 17, 14, 356, 20, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2456, 12, 9, 0, 350, 10, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2458, 12, 17, 10, 352, 10, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2459, 12, 19, 0, 353, 10, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
+(2465, 12, 17, 13, 356, 10, 1, '2023-07-28 08:52:33', '2023-07-28 08:52:33'),
 (1808, 13, 17, 16, 379, 30, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (1811, 13, 17, 15, 379, 60, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (1807, 13, 17, 14, 379, 20, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
@@ -886,7 +886,8 @@ INSERT INTO `abc_block_layouts` (`instance_id`, `layout_id`, `block_id`, `custom
 (2340, 30, 17, 17, 2333, 70, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (2341, 30, 9, 0, 0, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
 (2342, 30, 2, 0, 0, 20, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
-(2343, 30, 9, 0, 2342, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02');
+(2343, 30, 9, 0, 2342, 10, 1, '2023-07-27 13:09:02', '2023-07-27 13:09:02'),
+(2448, 12, 0, 0, 349, 10, 0, '2023-07-28 08:52:33', '2023-07-28 08:52:33');
 
 -- --------------------------------------------------------
 
@@ -2033,13 +2034,13 @@ INSERT INTO `abc_customers` (`customer_id`, `store_id`, `firstname`, `lastname`,
 (9, 0, 'Carlos', 'Compton', 'carloscmpton@abantecart.com', 'carloscmpton@abantecart.com', '(928) 205-0511', '', '', '', '6b006ba67f3c172e146991a2ad46d865', 'a:0:{}', '', 0, 8, 1, 1, 1, '109.104.166.98', '', '2013-08-31 15:13:14', '2015-06-12 09:56:24', '0000-00-00 00:00:00'),
 (10, 0, 'Garrison', 'Baxter', 'garrisonbaxter@abantecart.com', 'garrisonbaxter@abantecart.com', '(803) 189-5001', '', '', '', '6b006ba67f3c172e146991a2ad46d865', 'a:0:{}', '', 0, 9, 1, 1, 1, '109.104.166.138', '', '2013-09-01 12:51:47', '2015-06-12 09:56:24', '0000-00-00 00:00:00'),
 (11, 0, 'Anthony', 'Blair', 'anthonyblair@abantecart.com', 'anthonyblair@abantecart.com', '(402) 456-6398', '', '', '', '6b006ba67f3c172e146991a2ad46d865', 'a:0:{}', '', 0, 10, 1, 1, 1, '171.98.12.12', '', '2013-09-01 12:54:26', '2015-06-12 09:56:24', '0000-00-00 00:00:00'),
-(12, 0, 'Allen', 'Waters', 'allenwaters', 'allenwaters@abantecart.com', '(417) 280-7406', '', '', 'vkmQqxNw', 'e9aa1fed0f5c85e84ef9c9e8860c2732326e790b', 'a:0:{}', '', 0, 11, 1, 1, 1, '77.111.246.147', '', '2013-09-01 13:12:56', '2019-05-06 06:20:01', '2019-03-18 12:19:54'),
-(13, 0, 'Brock', 'Wheeler', 'michael', 'cotan@mailinator.com', '12893654499', '', '', 'QqHpW6DV', '189212083ca9de5f584e624b7a7c256af90fdcfb', 'a:0:{}', 'a:2:{i:108;i:1552911485;i:111;i:1552911579;}', 1, 12, 1, 1, 1, '77.111.246.167', '', '2013-09-08 15:28:20', '2022-06-28 08:38:05', '2019-03-18 12:12:59'),
-(14, 0, 'Yuri', 'Howard', 'howard566', 'howardinc@abantecart.com', '16943733146', '', '', '1IVINJ6A', '9980a6c101c48ba14277e5fcc7277fed31a8eb34', 'a:0:{}', '', 1, 13, 1, 1, 1, '77.111.247.7', 'N;', '2019-03-18 13:37:18', '2022-06-28 08:44:14', '2019-03-18 13:37:18'),
+(12, 0, 'Allen', 'Waters', 'allenwaters', 'allenwaters@abantecart.com', '(417) 280-7406', '', '', 'vkmQqxNw', 'e9aa1fed0f5c85e84ef9c9e8860c2732326e790b', 'a:0:{}', '', 0, 11, 1, 1, 1, '164.111.246.147', '', '2013-09-01 13:12:56', '2019-05-06 06:20:01', '2019-03-18 12:19:54'),
+(13, 0, 'Brock', 'Wheeler', 'michael', 'cotan@mailinator.com', '12893654499', '', '', 'QqHpW6DV', '189212083ca9de5f584e624b7a7c256af90fdcfb', 'a:0:{}', 'a:2:{i:108;i:1552911485;i:111;i:1552911579;}', 1, 12, 1, 1, 1, '164.111.246.167', '', '2013-09-08 15:28:20', '2022-06-28 08:38:05', '2019-03-18 12:12:59'),
+(14, 0, 'Yuri', 'Howard', 'howard566', 'howardinc@abantecart.com', '16943733146', '', '', '1IVINJ6A', '9980a6c101c48ba14277e5fcc7277fed31a8eb34', 'a:0:{}', '', 1, 13, 1, 1, 1, '164.111.247.7', 'N;', '2019-03-18 13:37:18', '2022-06-28 08:44:14', '2019-03-18 13:37:18'),
 (15, 0, 'Regan', 'Shields', 'RiaGardner', 'ricuvif@abantecart.com', '+1 (267) 125-5153', '', '', 'QaPiKdCR', '30a96d6489cc8089d2f66f1b3407334cfd5a5490', 'a:0:{}', '', 1, 14, 1, 1, 1, '23.129.64.106', 'N;', '2019-03-19 08:32:50', '2019-03-19 08:33:16', '2019-03-19 08:32:50'),
-(16, 0, 'Randall', 'Richards', 'randallri', 'randallri@abantecart.com', '17887737896', '', '', 'KGtkpKGm', '0664a4c600337892f120b53b81de10646e68ee91', 'a:1:{s:7:\"store_0\";a:1:{i:96;a:2:{s:3:\"qty\";i:2;s:7:\"options\";a:0:{}}}}', '', 0, 15, 1, 1, 1, '77.111.247.7', 'N;', '2019-03-21 12:08:29', '2022-06-28 08:48:15', '2022-06-28 08:48:15'),
+(16, 0, 'Randall', 'Richards', 'randallri', 'randallri@abantecart.com', '17887737896', '', '', 'KGtkpKGm', '0664a4c600337892f120b53b81de10646e68ee91', 'a:1:{s:7:\"store_0\";a:1:{i:96;a:2:{s:3:\"qty\";i:2;s:7:\"options\";a:0:{}}}}', '', 0, 15, 1, 1, 1, '164.111.247.7', 'N;', '2019-03-21 12:08:29', '2022-06-28 08:48:15', '2022-06-28 08:48:15'),
 (17, 0, 'Michelle', 'Barnett', 'mbarnett', 'mbarnett@abantecart.com', '1 469 537-8505', '', '', 'S8soCrGv', 'd5fd0c5d69c91a1207fe3d0848dcfdd5409b4465', 'a:0:{}', '', 0, 17, 1, 1, 1, '2001:67c:2628:647:10::33e', 'N;', '2022-06-28 08:05:34', '2023-07-27 13:48:05', '2023-07-27 13:44:27'),
-(18, 0, 'Elmer', 'West', 'X6QDsfu', 'elmer@abantecart.com', ' 1 (128) 392-8036', '', '', 'A82yWU3Q', '18cb2d304d5877f475222d04aef95a6b07cc41d8', 'a:1:{s:7:\"store_0\";a:0:{}}', '', 0, 18, 1, 1, 1, '77.111.246.40', 'N;', '2022-06-28 08:11:49', '2023-07-27 13:47:27', '0000-00-00 00:00:00');
+(18, 0, 'Elmer', 'West', 'X6QDsfu', 'elmer@abantecart.com', ' 1 (128) 392-8036', '', '', 'A82yWU3Q', '18cb2d304d5877f475222d04aef95a6b07cc41d8', 'a:1:{s:7:\"store_0\";a:0:{}}', '', 0, 18, 1, 1, 1, '164.111.246.40', 'N;', '2022-06-28 08:11:49', '2023-07-27 13:47:27', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -8947,18 +8948,6 @@ CREATE TABLE `abc_online_customers` (
   `date_added` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Truncate table before insert `abc_online_customers`
---
-
-TRUNCATE TABLE `abc_online_customers`;
---
--- Dumping data for table `abc_online_customers`
---
-
-INSERT INTO `abc_online_customers` (`customer_id`, `ip`, `url`, `referer`, `date_added`) VALUES
-(0, '176.53.220.112', 'http://demo.yourwebstore.net/', '', '2023-07-28 03:38:01');
-
 -- --------------------------------------------------------
 
 --
@@ -9032,7 +9021,7 @@ TRUNCATE TABLE `abc_orders`;
 --
 
 INSERT INTO `abc_orders` (`order_id`, `invoice_id`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `telephone`, `fax`, `email`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_zone`, `shipping_zone_id`, `shipping_country`, `shipping_country_id`, `shipping_address_format`, `shipping_method`, `shipping_method_key`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_zone`, `payment_zone_id`, `payment_country`, `payment_country_id`, `payment_address_format`, `payment_method`, `payment_method_key`, `comment`, `total`, `order_status_id`, `language_id`, `currency_id`, `currency`, `value`, `coupon_id`, `date_added`, `date_modified`, `ip`, `payment_method_data`) VALUES
-(22, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 18, 1, 'Elmer', 'West', '(914) 328-0251', '', 'elmer@abantecart.com', 'Elmer', 'West', '', '1433 Armand-Frappier', '', 'Sainte-Julie', 'J3E 3R6', 'Qu&eacute;bec', 612, 'Canada', 38, '', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Elmer', 'West', '', '291 Central Ave', '', 'White Plains', '10606', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please drop the parcel on the doorstep if the house is locked', '8.0000', 1, 1, 2, 'EUR', '0.93850000', 0, '2022-06-28 08:11:43', '2022-06-28 11:15:55', '77.111.247.7', ''),
+(22, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 18, 1, 'Elmer', 'West', '(914) 328-0251', '', 'elmer@abantecart.com', 'Elmer', 'West', '', '1433 Armand-Frappier', '', 'Sainte-Julie', 'J3E 3R6', 'Qu&eacute;bec', 612, 'Canada', 38, '', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Elmer', 'West', '', '291 Central Ave', '', 'White Plains', '10606', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please drop the parcel on the doorstep if the house is locked', '8.0000', 1, 1, 2, 'EUR', '0.93850000', 0, '2022-06-28 08:11:43', '2022-06-28 11:15:55', '164.111.247.7', ''),
 (2, 0, '', 0, 'Web Store Name', 'demo', 11, 1, 'Anthony', 'Blair', '+1 907-842-2240', '', 'anthonyblair@abantecart.com', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'Anthony', 'Blair', '', '104 Main Street', '', 'Dillingham', '', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', '', '', '418.8100', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '109.104.166.98', ''),
 (3, 0, '', 0, 'Web Store Name', 'demo', 5, 1, 'Gloria', 'Macias', '+1 418-461-2440', '', 'gloriamacias@abantecart.com', 'Gloria', 'Macias', '', 'Camille Marcoux 15', '', 'Blanc-Sablon', '1569', 'Nunavut', 609, 'Canada', 38, '', 'Flat Shipping Rate', '', 'Gloria', 'Macias', '', 'Camille Marcoux 15', '', 'Blanc-Sablon', '1569', 'Nunavut', 609, 'Canada', 38, '', 'Cash On Delivery', '', 'Please ASAP', '246.0000', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '109.104.166.98', ''),
 (4, 0, '', 0, 'Web Store Name', 'demo', 5, 1, 'Gloria', 'Macias', '+1 418-461-2440', '', 'gloriamacias@abantecart.com', '', '', '', '', '', '', '', '', 0, '', 0, '', '', '', 'Gloria', 'Macias', '', 'Camille Marcoux 15', '', 'Blanc-Sablon', '1569', 'Nunavut', 609, 'Canada', 38, '', 'Cash On Delivery', '', '', '310.5270', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '109.104.166.98', ''),
@@ -9045,15 +9034,15 @@ INSERT INTO `abc_orders` (`order_id`, `invoice_id`, `invoice_prefix`, `store_id`
 (11, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '+1 540-985-59700', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Roanoke', '', 'Virginia', 3673, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', '', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Roanoke', '', 'Virginia', 3673, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', '', '', '21.0000', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '109.104.166.98', ''),
 (12, 0, '', 0, 'Web Store Name', 'demo', 11, 1, 'Anthony', 'Blair', '+1 907-842-2240', '', 'anthonyblair@abantecart.com', 'Anthony', 'Blair', '', '104 Main Street', '', 'Dillingham', '', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', '', 'Anthony', 'Blair', '', '104 Main Street', '', 'Dillingham', '', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', '', '', '487.3750', 2, 1, 3, 'GBP', '0.63820000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '171.98.12.12', ''),
 (13, 0, '', 0, 'Web Store Name', 'demo', 11, 1, 'Anthony', 'Blair', '+1 907-842-2240', '', 'anthonyblair@abantecart.com', 'Anthony', 'Blair', '', '104 Main Street', '', 'Dillingham', '', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', '', 'Anthony', 'Blair', '', '104 Main Street', '', 'Dillingham', '', 'North Dakota', 3657, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', '', '', '626.9600', 1, 1, 3, 'GBP', '0.63820000', 0, '2019-03-18 11:37:51', '2019-03-18 11:37:51', '171.98.12.12', ''),
-(14, 0, '', 0, 'Web Store Name', 'demo', 13, 1, 'Michael', 'Neal', '55 555 5555 5555', '', 'michaelj@abantecart.com', 'Tom', 'Kipling', '', '100 Main Str', '', 'Shell Pile', '64034-2948', 'Missouri', 3648, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Tom', 'Kipling', '', '100 Main Str', '', 'Shell Pile', '64034-2948', 'Missouri', 3648, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '94.2300', 5, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 12:13:24', '2019-03-18 12:14:29', '77.111.246.167', ''),
-(15, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '30.2100', 3, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 12:20:54', '2019-03-18 12:26:40', '77.111.246.167', ''),
+(14, 0, '', 0, 'Web Store Name', 'demo', 13, 1, 'Michael', 'Neal', '55 555 5555 5555', '', 'michaelj@abantecart.com', 'Tom', 'Kipling', '', '100 Main Str', '', 'Shell Pile', '64034-2948', 'Missouri', 3648, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Tom', 'Kipling', '', '100 Main Str', '', 'Shell Pile', '64034-2948', 'Missouri', 3648, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '94.2300', 5, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 12:13:24', '2019-03-18 12:14:29', '164.111.246.167', ''),
+(15, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '30.2100', 3, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 12:20:54', '2019-03-18 12:26:40', '164.111.246.167', ''),
 (16, 0, '', 0, 'Web Store Name', 'demo', 14, 1, 'Yuri', 'Howard', '+1 (694) 373-3146', '', 'howardinc@abantecart.com', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '15.1900', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-18 13:39:08', '2019-03-18 13:39:24', '85.235.65.198', ''),
 (17, 0, '', 0, 'Web Store Name', 'demo', 15, 1, 'Regan', 'Shields', '+1 (267) 125-5153', '', 'ricuvif@abantecart.com', 'Regan', 'Shields', 'Day and Rivera Traders', '2355 Boulevard Bastien', '', 'Québec', 'QC G2B 1B3', 'Qu&eacute;bec', 612, 'Canada', 38, '', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Regan', 'Shields', 'Day and Rivera Traders', '2355 Boulevard Bastien', '', 'Québec', 'QC G2B 1B3', 'Qu&eacute;bec', 612, 'Canada', 38, '', 'Cash On Delivery', 'default_cod', '', '36.9000', 5, 1, 1, 'USD', '1.00000000', 0, '2019-03-19 08:32:53', '2019-03-19 08:36:46', '23.129.64.106', ''),
 (18, 0, '', 0, 'Web Store Name', 'demo', 16, 1, 'Randall', 'Richards', ' 1 (788) 773-7896', ' 1 (706) 122-6856', 'randallri@abantecart.com', 'Randall', 'Richards', '', '500 N Nebraska Ave', '', 'Tampa', '33603', 'Florida', 3630, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Mallory', 'Ballard', 'Guzman and Morin Inc', '2430 S French Ave', '', 'Sanford', '32771', 'Florida', 3630, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '50.8300', 1, 1, 1, 'USD', '1.00000000', 0, '2019-03-21 12:10:03', '2022-06-28 08:08:05', '205.185.126.56', ''),
-(19, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '112.6700', 3, 1, 1, 'USD', '1.00000000', 0, '2019-05-06 06:05:01', '2022-06-28 08:07:42', '77.111.246.147', ''),
-(20, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '47.5700', 1, 1, 1, 'USD', '1.00000000', 0, '2019-05-06 06:19:57', '2022-06-28 08:07:29', '77.111.246.147', ''),
-(21, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 17, 1, 'Michelle', 'Barnett', '1 469 537-8505', '', 'mbarnett@abantecart.com', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please don\'t deliver the shipment on Friday as I won\'t be available', '202.1737', 1, 1, 2, 'EUR', '0.93850000', 0, '2022-06-28 08:05:30', '2022-06-28 11:15:55', '77.111.246.40', ''),
-(23, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 14, 1, 'Yuri', 'Howard', '16943733146', '', 'howardinc@abantecart.com', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please provide the order with gift wrap', '33.4700', 1, 1, 1, 'USD', '1.00000000', 0, '2022-06-28 08:44:08', '2022-06-28 11:15:55', '77.111.247.7', ''),
+(19, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '112.6700', 3, 1, 1, 'USD', '1.00000000', 0, '2019-05-06 06:05:01', '2022-06-28 08:07:42', '164.111.246.147', ''),
+(20, 0, '', 0, 'Web Store Name', 'demo', 12, 1, 'Allen', 'Waters', '(417) 280-7406', '', 'allenwaters@abantecart.com', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Allen', 'Waters', '', '110 Shenandoah Avenue', '', 'Honohina', '86565-1710', 'Arizona', 3616, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '47.5700', 1, 1, 1, 'USD', '1.00000000', 0, '2019-05-06 06:19:57', '2022-06-28 08:07:29', '164.111.246.147', ''),
+(21, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 17, 1, 'Michelle', 'Barnett', '1 469 537-8505', '', 'mbarnett@abantecart.com', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please don\'t deliver the shipment on Friday as I won\'t be available', '202.1737', 1, 1, 2, 'EUR', '0.93850000', 0, '2022-06-28 08:05:30', '2022-06-28 11:15:55', '164.111.246.40', ''),
+(23, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 14, 1, 'Yuri', 'Howard', '16943733146', '', 'howardinc@abantecart.com', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Yuri', 'Howard', 'Eaton Stevenson Inc', '22555 Jensen Ave', '', 'Reedley', '93654', 'California', 3624, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', 'Please provide the order with gift wrap', '33.4700', 1, 1, 1, 'USD', '1.00000000', 0, '2022-06-28 08:44:08', '2022-06-28 11:15:55', '164.111.247.7', ''),
 (25, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 17, 1, 'Michelle', 'Barnett', '1 469 537-8505', '', 'mbarnett@abantecart.com', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Flat Shipping Rate', 'default_flat_rate_shipping.default_flat_rate_shipping', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '68.1900', 1, 1, 1, 'USD', '1.00000000', 0, '2023-07-27 13:44:29', '2023-07-27 13:44:32', '2001:67c:2628:647:10::33e', ''),
 (26, 0, '', 0, 'Web Store Name', 'https://demo.abantecart.com/', 17, 1, 'Michelle', 'Barnett', '1 469 537-8505', '', 'mbarnett@abantecart.com', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Local Delivery', 'default_local_delivery.default_local_delivery', 'Michelle', 'Barnett', '', '3180 S Redwood Rd', '', 'West Valley City', '84119', 'Utah', 3670, 'United States', 223, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 'Cash On Delivery', 'default_cod', '', '162.2100', 1, 1, 1, 'USD', '1.00000000', 0, '2023-07-27 13:48:02', '2023-07-27 13:48:04', '2001:67c:2628:647:10::33e', '');
 
@@ -12263,7 +12252,6 @@ INSERT INTO `abc_settings` (`setting_id`, `store_id`, `group`, `key`, `value`, `
 (119, 0, 'appearance', 'config_image_manufacturer_width', '130', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
 (120, 0, 'appearance', 'admin_template', 'default', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
 (121, 0, 'appearance', 'admin_width', '100%', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
-(257, 0, 'appearance', 'config_storefront_template', 'default', '2023-07-27 13:10:09', '2023-07-27 13:10:09'),
 (123, 0, 'appearance', 'config_image_resize_fill_color', '#ffffff', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
 (124, 0, 'mail', 'config_mail_protocol', 'mail', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
 (125, 0, 'mail', 'config_mail_parameter', '', '0000-00-00 00:00:00', '2023-07-27 13:08:58'),
@@ -12390,7 +12378,8 @@ INSERT INTO `abc_settings` (`setting_id`, `store_id`, `group`, `key`, `value`, `
 (343, 0, 'default_local_delivery', 'default_local_delivery_max_order_subtotal', '', '0000-00-00 00:00:00', '2023-07-27 13:42:54'),
 (344, 0, 'default_local_delivery', 'default_local_delivery_sort_order', '', '0000-00-00 00:00:00', '2023-07-27 13:42:54'),
 (345, 0, 'default_local_delivery', 'default_local_delivery_accept_payments', '0', '0000-00-00 00:00:00', '2023-07-27 13:42:54'),
-(346, 0, 'default_local_delivery', 'store_id', '0', '0000-00-00 00:00:00', '2023-07-27 13:42:54');
+(346, 0, 'default_local_delivery', 'store_id', '0', '0000-00-00 00:00:00', '2023-07-27 13:42:54'),
+(356, 0, 'appearance', 'config_storefront_template', 'default', '2023-07-28 11:38:48', '2023-07-28 11:38:48');
 
 -- --------------------------------------------------------
 
@@ -12769,7 +12758,7 @@ TRUNCATE TABLE `abc_users`;
 --
 
 INSERT INTO `abc_users` (`user_id`, `user_group_id`, `username`, `salt`, `password`, `firstname`, `lastname`, `email`, `status`, `ip`, `last_login`, `date_added`, `date_modified`) VALUES
-(1, 1, 'demo', 'sMsXhtdz', 'c87d267f84202f5e8d3c752d3c89d506ae8bcfcf', '', '', 'demo@abantecart.com', 1, '77.222.27.57', '2023-07-28 06:29:14', '2023-07-27 13:08:59', '2023-07-28 06:29:14');
+(1, 1, 'demo', 'sMsXhtdz', 'c87d267f84202f5e8d3c752d3c89d506ae8bcfcf', '', '', 'demo@abantecart.com', 1, '164.222.27.93', '2023-07-28 10:39:33', '2023-07-27 13:08:59', '2023-07-28 10:39:33');
 
 -- --------------------------------------------------------
 
@@ -21896,7 +21885,7 @@ ALTER TABLE `abc_block_descriptions`
 -- AUTO_INCREMENT for table `abc_block_layouts`
 --
 ALTER TABLE `abc_block_layouts`
-  MODIFY `instance_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2424;
+  MODIFY `instance_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2473;
 
 --
 -- AUTO_INCREMENT for table `abc_block_templates`
@@ -22256,7 +22245,7 @@ ALTER TABLE `abc_reviews`
 -- AUTO_INCREMENT for table `abc_settings`
 --
 ALTER TABLE `abc_settings`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=353;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
 
 --
 -- AUTO_INCREMENT for table `abc_stores`
