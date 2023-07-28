@@ -32,6 +32,7 @@ docker push abantecart/abantecart_demo
 1. Clone repo.
 2. Move to directory 'demo/docker'
 3. Build image & push image:
+
 ```docker buildx build --platform linux/amd64,linux/arm64 -t abantecart/abantecart_demo:latest --push ./```
 
 
