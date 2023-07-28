@@ -2,7 +2,7 @@ Repository for abantecart_demo on Docker Hub
 
 Update to new version of Abantecart.
 
-###Varant 1: 
+### Varant 1: 
 
 1. Clone repo.
 2. Move to directory 'demo/docker'
@@ -27,7 +27,7 @@ docker login
 docker push abantecart/abantecart_demo
 ```
 
-###Varant 2:
+### Varant 2:
 
 1. Clone repo.
 2. Move to directory 'demo/docker'
@@ -35,5 +35,5 @@ docker push abantecart/abantecart_demo
 ```docker buildx build --platform linux/amd64,linux/arm64 -t abantecart/abantecart_demo:latest --push ./```
 
 
-###Note:    
+### Note:    
 demo.abantecart.com will be updated in 30 min.
