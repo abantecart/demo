@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8.1-fpm-bullseye
 LABEL maintainer="Denis Vagner <help@abantecart.com>"
 
 RUN apt-get update && apt-get install -y \
@@ -38,7 +38,7 @@ COPY abc.sql /var/www/abantecart/
 
 RUN  service mariadb start \
     && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=https://demo.abantecart.com/ --https_server=https://demo.abantecart.com/ --with-sample-data=abantecart_sample_data.sql \
-#    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
+    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
     && apt-get clean \
     && rm -rf /var/www/abantecart/public_html/install \
     && rm -rf /var/www/abantecart/public_html/system/cache/*
