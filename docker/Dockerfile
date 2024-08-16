@@ -1,5 +1,5 @@
-FROM php:8.1-fpm-bullseye
-LABEL maintainer="Denis Vagner <help@abantecart.com>"
+FROM php:8.3-fpm-bullseye
+LABEL maintainer="Pavel Rojkov <help@abantecart.com>"
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -13,13 +13,14 @@ RUN apt-get update && apt-get install -y \
     libxpm-dev \
     libonig-dev \
     libzip-dev \
+    libavif-dev \
     nginx \
     mariadb-server \
     mc \
     net-tools  \
     libxml2-dev && \
     docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip soap && \
-    docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
+    docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/  --with-webp=/usr/include/ --with-avif=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
