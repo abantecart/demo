@@ -21687,6 +21687,118 @@ ALTER TABLE `abc_zones_to_locations`
   MODIFY `zone_to_location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
+--
+-- v1.4.1
+--
+alter table `abc_contents`
+    add column `content_bar` int(1) NOT NULL DEFAULT '0' after `status`,
+    add column `author` varchar(128) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+    add column `icon_rl_id` int(11),
+    add column `publish_date` timestamp NULL,
+    add column `expire_date` timestamp NULL,
+    add column `date_added` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    add column `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+update `abc_contents` c set `publish_date` = (
+    select `date_added` from `abc_content_descriptions` cd where c.content_id = cd.content_id limit 1
+);
+
+UPDATE `abc_content_descriptions` c SET `title` = `name` WHERE title = '';
+ALTER TABLE `abc_content_descriptions` DROP COLUMN `name`;
+
+CREATE TEMPORARY TABLE temp_unique AS
+SELECT MIN(content_id) AS content_id, parent_content_id
+FROM `abc_contents`
+GROUP BY content_id;
+
+DELETE FROM `abc_contents`
+WHERE (content_id, parent_content_id) NOT IN (SELECT content_id, parent_content_id FROM temp_unique);
+
+DROP TEMPORARY TABLE temp_unique;
+
+DROP TABLE IF EXISTS `abc_content_tags`;
+CREATE TABLE `abc_content_tags` (
+   `content_id` int(11) NOT NULL,
+   `tag` varchar(32) COLLATE utf8_general_ci NOT NULL COMMENT 'translatable',
+   `language_id` int(11) NOT NULL,
+   PRIMARY KEY  (`content_id`,`tag`,`language_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `abc_blocks` (`block_txt_id`, `controller`, `date_added`) VALUES
+    ('new_content','blocks/new_content',NOW());
+
+INSERT INTO `abc_block_templates` (`block_id`, `parent_block_id`, `template`, `date_added`) VALUES
+    (LAST_INSERT_ID(), 3, 'blocks/new_content.tpl',NOW()),
+    (LAST_INSERT_ID(), 6, 'blocks/new_content.tpl',NOW());
+
+INSERT INTO `abc_blocks` (`block_txt_id`, `controller`, `date_added`) VALUES
+    ('content_search', 'blocks/content_search', now());
+
+INSERT INTO `abc_block_templates` (`block_id`, `parent_block_id`, `template`, `date_added`) VALUES
+    (LAST_INSERT_ID(), 1, 'blocks/content_search.tpl', now()),
+    (LAST_INSERT_ID(), 2, 'blocks/content_search.tpl', now()),
+    (LAST_INSERT_ID(), 3, 'blocks/content_search.tpl', now()),
+    (LAST_INSERT_ID(), 6, 'blocks/content_search.tpl', now());
+
+--
+-- DDL for table `fields_history`
+--
+DROP TABLE IF EXISTS `abc_fields_history`;
+create table `abc_fields_history`
+(
+    `hist_id`       int(10)                                not null auto_increment,
+    `table_name`    varchar(40)                            not null,
+    `record_id`      int                                    not null,
+    `field`         varchar(128)                           not null,
+    `version`       int(10)        default 1               not null,
+    `language_id`   int(10)                                not null,
+    `text`          longtext                               not null,
+    `date_added`    timestamp  default current_timestamp() null,
+    primary key (`hist_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+create index `abc_fields_history_idx`
+    on `abc_fields_history` (`table_name`, `record_id`, `field`, `language_id`);
+
+--
+-- DDL for table `user_sessions`
+--
+DROP TABLE IF EXISTS `abc_user_sessions`;
+CREATE TABLE `abc_user_sessions` (
+    `user_id` int(11) NOT NULL,
+    `token` varchar(128) NOT NULL DEFAULT '',
+    `ip` varchar(50) NOT NULL DEFAULT '',
+    `last_active` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `date_added` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`user_id`, `token`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- DDL for table `customer_sessions`
+--
+DROP TABLE IF EXISTS `abc_customer_sessions`;
+CREATE TABLE `abc_customer_sessions` (
+    `customer_id` int(11) NOT NULL AUTO_INCREMENT,
+    `session_id` varchar(128) NULL DEFAULT '',
+    `ip` varchar(50) NOT NULL DEFAULT '',
+    `last_active` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `date_added` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`customer_id`, `session_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+UPDATE `abc_dataset_values`
+SET value_varchar = 'design/template'
+WHERE row_id=3 AND value_varchar='extension/extensions/template';
+
+UPDATE `abc_blocks`
+SET controller='blocks/viewed_products'
+WHERE controller='viewed_products/viewed_products' AND block_txt_id = 'viewed_products';
+
+UPDATE `abc_block_templates`
+SET template = CONCAT('blocks/',template)
+WHERE SUBSTRING(template,1,13) = 'viewed_block_';
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
