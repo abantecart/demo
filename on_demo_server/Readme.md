@@ -11,3 +11,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 0 0 1 */2 * cd /var/docker/ && bash /var/docker/init-letsencrypt.sh
 ```
+
+See init-letsencrypt.sh for more details.
+
+default_orig.conf is copied to nginx folder and used after SSL update.
