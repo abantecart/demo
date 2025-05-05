@@ -1,0 +1,22 @@
+# docker-compose version
+version: '2'
+services:
+  abantecart:
+     image: abantecart/abantecart_demo
+     ports:
+       - "80:80"
+       - "443:443"
+     restart: always
+     volumes:
+       - ./nginx/default.conf:/etc/nginx/sites-available/default
+       - ./certbot/conf:/etc/letsencrypt
+       - ./certbot/www:/var/www/certbot
+     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  certbot:
+    image: certbot/certbot
+    restart: always
+    volumes:
+       - ./certbot/conf:/etc/letsencrypt
+       - ./certbot/www:/var/www/certbot
+       - ./certbot/log:/var/log/letsencrypt
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
