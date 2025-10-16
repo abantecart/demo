@@ -60,6 +60,7 @@ DROP TABLE IF EXISTS `abc_ant_messages`;
 CREATE TABLE `abc_ant_messages` (
   `id` varchar(60) NOT NULL,
   `priority` int(11) NOT NULL DEFAULT 0,
+  `placeholder` varchar(128) null,
   `start_date` timestamp NULL DEFAULT NULL,
   `end_date` timestamp NULL DEFAULT NULL,
   `viewed_date` timestamp NULL DEFAULT NULL,
