@@ -36,10 +36,12 @@ RUN git clone https://github.com/abantecart/abantecart-src.git /var/www/abanteca
 WORKDIR /var/www/abantecart/public_html/
 
 COPY abc.sql /var/www/abantecart/
+COPY migration_abc_to_1.4.4_snapshot_additive.sql /var/www/abantecart/
 
 RUN  service mariadb start \
     && /usr/local/bin/php ./install/cli_install.php install --db_host=127.0.0.1 --db_user=admin --db_password=pass --db_name=abantecart  --db_driver=amysqli  --db_prefix=abc_ --admin_path=demo_admin --username=demo  --password=demo  --email=demo@demo.com  --http_server=https://demo.abantecart.com/ --https_server=https://demo.abantecart.com/ \
-    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql
+    && mysql -u admin -ppass abantecart < /var/www/abantecart/abc.sql \
+    && mysql -u admin -ppass abantecart < /var/www/abantecart/migration_abc_to_1.4.4_snapshot_additive.sql
 RUN apt-get clean \
     && rm -rf /var/www/abantecart/public_html/install \
     && rm -rf /var/www/abantecart/public_html/system/cache/*
