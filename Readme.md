@@ -8,21 +8,17 @@ Update to new version of Abantecart.
 2. Move to directory 'demo/docker'
 3. Build image:
 ```
-docker build ./
+docker build -t abantecart/abantecart_demo ./
 ``` 
-4. Show all images 
+4. Show all images to check if image is built:
 ```
 docker images
 ```
-5. Find latest and tag them 
-```
-docker tag [IMAGE_ID] abantecart/abantecart_demo
-```
-6. Login Docker Hub
+5. Login Docker Hub
 ```
 docker login
 ```
-7. Push image to Docker Hub
+6. Push image to Docker Hub
 ```
 docker push abantecart/abantecart_demo
 ```
