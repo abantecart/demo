@@ -23,7 +23,7 @@ docker login
 docker push abantecart/abantecart_demo
 ```
 
-### Variant 2:
+### Variant 2 on MacOS:
 
 1. Clone repo.
 2. Move to directory 'demo/docker'
