@@ -458,3 +458,21 @@ WHERE NOT EXISTS (
     AND `group` = 'general'
     AND `key` = 'config_google_api_key'
 );
+
+-- Enable Google Places address autocomplete in general settings
+UPDATE `abc_settings`
+SET `value` = '1',
+    `date_modified` = CURRENT_TIMESTAMP
+WHERE `store_id` = 0
+  AND `group` = 'general'
+  AND `key` = 'config_google_address_autocomplete';
+
+INSERT INTO `abc_settings` (`store_id`, `group`, `key`, `value`, `date_added`, `date_modified`)
+SELECT 0, 'general', 'config_google_address_autocomplete', '1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM `abc_settings`
+  WHERE `store_id` = 0
+    AND `group` = 'general'
+    AND `key` = 'config_google_address_autocomplete'
+);
