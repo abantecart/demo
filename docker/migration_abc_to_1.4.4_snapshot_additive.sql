@@ -385,3 +385,76 @@ SET FOREIGN_KEY_CHECKS=1;
 UPDATE `abc_resource_descriptions`
 SET `resource_code` = '<i class="fa fa-money"></i>&nbsp;'
 WHERE `resource_id` = 260;
+
+-- Storefront menu compatibility fix for Checkout icon
+UPDATE `abc_dataset_values` v
+JOIN (
+  SELECT v1.`row_id`
+  FROM `abc_dataset_values` v1
+  JOIN `abc_dataset_values` v3
+    ON v3.`row_id` = v1.`row_id`
+   AND v3.`dataset_column_id` = 3
+   AND v3.`value_varchar` = 'checkout/fast_checkout'
+  WHERE v1.`dataset_column_id` = 1
+    AND v1.`value_varchar` = 'checkout'
+) x ON x.`row_id` = v.`row_id`
+SET v.`value_varchar` = '<i class="fa fa-money"></i>&nbsp;'
+WHERE v.`dataset_column_id` = 2;
+
+-- Ensure Checkout icon uses resource library id expected by storefront renderer
+UPDATE `abc_dataset_values` v
+JOIN (
+  SELECT v1.`row_id`
+  FROM `abc_dataset_values` v1
+  JOIN `abc_dataset_values` v3
+    ON v3.`row_id` = v1.`row_id`
+   AND v3.`dataset_column_id` = 3
+   AND v3.`value_varchar` = 'checkout/fast_checkout'
+  WHERE v1.`dataset_column_id` = 1
+    AND v1.`value_varchar` = 'checkout'
+) x ON x.`row_id` = v.`row_id`
+SET v.`value_integer` = 260
+WHERE v.`dataset_column_id` = 7;
+
+INSERT INTO `abc_dataset_values` (`dataset_column_id`, `value_integer`, `value_float`, `value_varchar`, `value_text`, `value_timestamp`, `value_boolean`, `row_id`)
+SELECT 7, 260, NULL, NULL, NULL, CURRENT_TIMESTAMP, NULL, x.`row_id`
+FROM (
+  SELECT v1.`row_id`
+  FROM `abc_dataset_values` v1
+  JOIN `abc_dataset_values` v3
+    ON v3.`row_id` = v1.`row_id`
+   AND v3.`dataset_column_id` = 3
+   AND v3.`value_varchar` = 'checkout/fast_checkout'
+  WHERE v1.`dataset_column_id` = 1
+    AND v1.`value_varchar` = 'checkout'
+) x
+LEFT JOIN `abc_dataset_values` existing
+  ON existing.`row_id` = x.`row_id`
+ AND existing.`dataset_column_id` = 7
+WHERE existing.`value_sort_order` IS NULL;
+
+-- Explicit group order for RegisterCustomerFrm (form_id=6)
+DELETE FROM `abc_field_group_to_form` WHERE `form_id` = 6;
+INSERT INTO `abc_field_group_to_form` (`group_id`, `form_id`, `sort_order`) VALUES
+  (1, 6, 1), -- Your Personal Details
+  (2, 6, 2), -- Your Address
+  (3, 6, 3), -- Login Details
+  (4, 6, 4); -- Newsletter
+
+-- Set Google Maps/Places API key in general settings
+UPDATE `abc_settings`
+SET `value` = 'AIzaSyBRI5K_TA4p3So0w43a9XDpOMytHjxGC7w',
+    `date_modified` = CURRENT_TIMESTAMP
+WHERE `store_id` = 0
+  AND `group` = 'general'
+  AND `key` = 'config_google_api_key';
+
+INSERT INTO `abc_settings` (`store_id`, `group`, `key`, `value`, `date_added`, `date_modified`)
+SELECT 0, 'general', 'config_google_api_key', 'AIzaSyBRI5K_TA4p3So0w43a9XDpOMytHjxGC7w', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM `abc_settings`
+  WHERE `store_id` = 0
+    AND `group` = 'general'
+    AND `key` = 'config_google_api_key'
+);
