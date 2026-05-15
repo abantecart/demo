@@ -440,3 +440,21 @@ INSERT INTO `abc_field_group_to_form` (`group_id`, `form_id`, `sort_order`) VALU
   (2, 6, 2), -- Your Address
   (3, 6, 3), -- Login Details
   (4, 6, 4); -- Newsletter
+
+-- Set Google Maps/Places API key in general settings
+UPDATE `abc_settings`
+SET `value` = 'AIzaSyBRI5K_TA4p3So0w43a9XDpOMytHjxGC7w',
+    `date_modified` = CURRENT_TIMESTAMP
+WHERE `store_id` = 0
+  AND `group` = 'general'
+  AND `key` = 'config_google_api_key';
+
+INSERT INTO `abc_settings` (`store_id`, `group`, `key`, `value`, `date_added`, `date_modified`)
+SELECT 0, 'general', 'config_google_api_key', 'AIzaSyBRI5K_TA4p3So0w43a9XDpOMytHjxGC7w', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM `abc_settings`
+  WHERE `store_id` = 0
+    AND `group` = 'general'
+    AND `key` = 'config_google_api_key'
+);
